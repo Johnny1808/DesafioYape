@@ -10,13 +10,13 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Instala las dependencias del proyecto
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
         stage('Run Karate Tests') {
             steps {
                 // Ejecuta los tests de Karate y genera los reportes en formato JUnit (XML)
-                sh 'mvn test -Dkarate.options="--output-format junit"'
+                bat 'mvn test -Dkarate.options="--output-format junit"'
             }
         }
     }
