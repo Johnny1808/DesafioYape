@@ -15,15 +15,23 @@ pipeline {
         }
         stage('Run Karate Tests') {
             steps {
-                // Ejecuta los tests de Karate
-                sh 'mvn test'
+                // Ejecuta los tests de Karate y genera los reportes en formato JUnit (XML)
+                sh 'mvn test -Dkarate.options="--output-format junit"'
             }
         }
     }
     post {
         always {
-            // Genera reportes o logs después de la ejecución
+            // Recoge los reportes de JUnit generados por Karate
             junit '**/target/surefire-reports/*.xml'
+
+            // Opción para publicar los reportes HTML de Karate en Jenkins
+            publishHTML([allowMissing: false,
+                         alwaysLinkToLastBuild: true,
+                         keepAll: true,
+                         reportDir: 'target/karate-reports',
+                         reportFiles: 'karate-summary.html',
+                         reportName: 'Karate HTML Report'])
         }
     }
 }
