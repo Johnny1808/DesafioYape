@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Clona tu repositorio desde GitHub
-                git 'https://github.com/Johnny1808/DesafioYape.git'
+                // Clona tu repositorio desde GitHub especificando la rama
+                git branch: 'main', url: 'https://github.com/Johnny1808/DesafioYape.git'
             }
         }
         stage('Install Dependencies') {
