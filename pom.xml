@@ -20,6 +20,12 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>com.intuit.karate</groupId>
+            <artifactId>karate-apache</artifactId>
+            <version>0.9.6</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.11.1</version>
@@ -31,11 +37,22 @@
             <version>5.11.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.19.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.19.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <testResources>
             <testResource>
-                <directory>src/test/java</directory>
+                <directory>src/test/java/resources</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
                 </excludes>

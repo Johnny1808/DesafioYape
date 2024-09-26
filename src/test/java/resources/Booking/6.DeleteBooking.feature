@@ -1,4 +1,4 @@
-@DeleteBooking
+@Booking
 Feature: Eliminar Booking por ID
 
   @DeleteBooking-caso1

@@ -1,4 +1,4 @@
-@createBooking
+@Booking
 Feature: Crear booking
 
   @createBooking-caso1

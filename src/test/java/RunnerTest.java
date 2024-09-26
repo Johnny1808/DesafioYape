@@ -3,8 +3,8 @@ import com.intuit.karate.junit5.Karate;
 public class RunnerTest {
 
     @Karate.Test
-    Karate testSample() {
-        return Karate.run("classpath:Booking/CreateBooking.feature");
+    Karate testAll() {
+        return Karate.run().relativeTo(getClass());
     }
 
 }

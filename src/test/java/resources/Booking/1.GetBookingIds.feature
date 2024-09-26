@@ -1,4 +1,4 @@
-@GetBokingIds
+@Booking
 Feature: Obtener el ID de todos los bookings
 
   @GetBokingIds-caso1

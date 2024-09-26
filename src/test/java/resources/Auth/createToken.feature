@@ -1,7 +1,6 @@
 @createToken
 Feature: Creacion token
 
-  @createToken-caso1
   Scenario: Creacion de token correto
     Given url 'https://restful-booker.herokuapp.com/auth'
     And request { "username" : "admin", "password" : "password123" }

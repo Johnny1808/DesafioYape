@@ -1,4 +1,4 @@
-@getBooking
+@Booking
 Feature: Obtener informacion del booking por ID
 
   @getBooking-caso1

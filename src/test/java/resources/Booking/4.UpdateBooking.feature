@@ -1,4 +1,4 @@
-@UpdateBooking
+@Booking
 Feature: Actualizar booking
 
   @UpdateBooking-caso1

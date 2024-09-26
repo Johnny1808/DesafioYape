@@ -1,4 +1,4 @@
-@PartialUpdateBooking
+@Booking
 Feature: Actualizacion parcial booking
 
   @PartialUpdateBooking-caso1
